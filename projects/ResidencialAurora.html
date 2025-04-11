@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terras Raras Vila Carrão | Construtora HRX</title>
+  <meta name="description" content="Empreendimento sofisticado na Vila Carrão com apartamentos de 27m², 35m² e 45m². Conforto, localização privilegiada e diferenciais exclusivos." />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .icon-size { font-size: 2rem; }
+    .cta-button {
+      @apply inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-xl shadow-md transition;
+    }
+    .modal-overlay {
+      @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 flex items-center justify-center z-50 hidden;
+    }
+    .modal-content {
+      @apply bg-white p-6 rounded-xl shadow-lg text-center max-w-xl w-full;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- HEADER -->
+  <header class="bg-white border-b border-gray-200 py-4 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 max-w-6xl flex items-center justify-between">
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-blue-900">
+            <a href="#" class="hover:text-blue-700 transition-colors duration-200">Construtora HRX</a>
+        </h1>
+        <nav class="space-x-4 text-gray-700 font-medium">
+          <a href="#sobre" class="hover:text-yellow-500 transition">Sobre</a>
+          <a href="#diferenciais" class="hover:text-yellow-500 transition">Diferenciais</a>
+          <a href="#plantas" class="hover:text-yellow-500 transition">Plantas</a>
+          <a href="#contato" class="hover:text-yellow-500 transition">Contato</a>
+        </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="flex items-center justify-center shadow-md mx-auto" style="background-image: url('/HTML/HRX/images/rrr.webp'); background-size: cover; background-position: center; height: 100vh;">
+    <div class="bg-black bg-opacity-60 text-white p-10 rounded-xl text-center" data-aos="fade-up">
+      <h2 class="text-5xl font-bold mb-4">Viva com Sofisticação</h2>
+      <p class="text-xl">Projetos com qualidade, confiança e segurança</p>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-20 bg-gray-50 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-blue-900 mb-6">Sobre o Empreendimento</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        O <strong>Terras Raras Vila Carrão</strong> é mais do que um lançamento, é uma oportunidade única de viver com estilo e sofisticação em um dos bairros mais tradicionais da zona leste...
+      </p>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS -->
+  <section id="diferenciais" class="py-20 bg-blue-50 text-center">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-blue-900 mb-10" data-aos="fade-up">Diferenciais</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div data-aos="fade-up"><i class="fas fa-map-marker-alt icon-size text-yellow-500 mb-4"></i><p>Localização estratégica</p></div>
+        <div data-aos="fade-up" data-aos-delay="100"><i class="fas fa-tree icon-size text-yellow-500 mb-4"></i><p>Áreas verdes amplas</p></div>
+        <div data-aos="fade-up" data-aos-delay="200"><i class="fas fa-shield-alt icon-size text-yellow-500 mb-4"></i><p>Segurança 24h</p></div>
+        <div data-aos="fade-up" data-aos-delay="300"><i class="fas fa-solar-panel icon-size text-yellow-500 mb-4"></i><p>Energia solar</p></div>
+        <div data-aos="fade-up" data-aos-delay="400"><i class="fas fa-dumbbell icon-size text-yellow-500 mb-4"></i><p>Academia equipada</p></div>
+        <div data-aos="fade-up" data-aos-delay="500"><i class="fas fa-wifi icon-size text-yellow-500 mb-4"></i><p>Wi-Fi nas áreas comuns</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANTAS -->
+  <section id="plantas" class="py-20 bg-white text-center">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-blue-900 mb-10">Conheça as Plantas</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="cursor-pointer" onclick="openModal('modal27')">
+          <img src="/HTML/HRX/images/apartamento-na-planta.webp" class="rounded-xl shadow-md hover:scale-105 transition">
+          <p class="mt-2 font-semibold">27m² - Studio</p>
+        </div>
+        <div class="cursor-pointer" onclick="openModal('modal35')">
+          <img src="/HTML/HRX/images/apartamento-na-planta.webp" class="rounded-xl shadow-md hover:scale-105 transition">
+          <p class="mt-2 font-semibold">35m² - 1 Dormitório</p>
+        </div>
+        <div class="cursor-pointer" onclick="openModal('modal45')">
+          <img src="/HTML/HRX/images/apartamento-na-planta.webp" class="rounded-xl shadow-md hover:scale-105 transition">
+          <p class="mt-2 font-semibold">45m² - 2 Dormitórios</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAIS -->
+  <div id="modal27" class="modal-overlay"><div class="modal-content"><img src="/HTML/HRX/images/apartamento-na-planta.webp" alt="Planta 27m²"><button onclick="closeModal('modal27')" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Fechar</button></div></div>
+  <div id="modal35" class="modal-overlay"><div class="modal-content"><img src="/HTML/HRX/images/project_C-117_image__paralax_1.jpg" alt="Planta 35m²"><button onclick="closeModal('modal35')" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Fechar</button></div></div>
+  <div id="modal45" class="modal-overlay"><div class="modal-content"><img src="/HTML/HRX/images/project_C-117_image__paralax_1.jpg" alt="Planta 45m²"><button onclick="closeModal('modal45')" class="mt-4 bg-red-500 text-white px-4 py-2 rounded">Fechar</button></div></div>
+
+  <!-- CONTATO -->
+  <section id="contato" class="py-20 bg-gray-50 text-center">
+    <div class="max-w-xl mx-auto">
+      <h3 class="text-3xl font-bold text-blue-900 mb-4">Fale com um especialista</h3>
+      <p class="mb-6 text-gray-700">Cadastre-se para receber mais informações sobre o Terras Raras Vila Carrão.</p>
+      <a href="https://wa.me/5511999999999" target="_blank" class="cta-button">Quero saber mais</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-100 py-6 text-center text-gray-600 text-sm">
+    © 2025 Construtora HRX - Todos os direitos reservados.
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+
+    document.querySelectorAll('.modal-overlay').forEach(modal => {
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) closeModal(modal.id);
+      });
+    });
+  </script>
+</body>
+</html>
