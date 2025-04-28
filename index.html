@@ -60,71 +60,72 @@
     animation: marquee 25s linear infinite;
   }
 
-  
   </style>
 </head>
 
 <body class="bg-white text-gray-800">
-    
-<!-- Header -->
+    <!-- Header -->
 <header class="bg-white border-b border-gray-200 py-4 shadow-md sticky top-0 z-50">
   <div class="container mx-auto px-4 max-w-6xl flex items-center justify-between">
-    <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-blue-900">
-      <a href="#" class="hover:text-blue-700 transition-colors duration-200">Construtora RXE</a>
-    </h1>
+    <!-- Logo -->
+    <a href="#" class="hover:opacity-90 transition-opacity duration-200">
+      <img 
+        src="/images/logoAzulTransparente (1).png" 
+        alt="Logo Construtora RXE" 
+        class="h-16 md:h-18 w-auto"
+      >
+    </a>
     
-    <!-- Botão Mobile (Hamburger) -->
+    <!-- Botão Mobile -->
     <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
       <i class="fas fa-bars text-2xl"></i>
     </button>
     
-    <!-- Menu Desktop (original) -->
+    <!-- Menu Desktop -->
     <nav id="desktop-menu" class="hidden md:flex space-x-6 text-sm md:text-base font-medium">
       <a href="#quem-somos" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Quem Somos</a>
-      <a href="#empreendimentos" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Empreendimentos</a>
-      <a href="#entregues" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Entregues</a>
+
+      <!-- Dropdown Empreendimentos -->
+      <div class="relative group">
+        <button class="flex items-center text-gray-700 hover:text-yellow-600 transition-colors duration-200">
+          Empreendimentos <i class="fas fa-chevron-down ml-1 text-xs"></i>
+        </button>
+        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-50">
+          <a href="#empreendimentos" class="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">Lançamentos</a>
+          <a href="/projects/ResidencialAurora.html" class="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">Residencial Aurora</a>
+          <a href="/projects/ResidencialSolNascente.html" class="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">Residencial Sol Nascente</a>
+          <!--<a href="#entregues" class="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">Entregues</a> -->
+
+        </div>
+      </div>
       <a href="#contato" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Contato</a>
+      <a href="https://www8.caixa.gov.br/siopiinternet-web/simulaOperacaoInternet.do?method=inicializarCasoUso" target="_blank" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Simulação</a>
     </nav>
   </div>
   
-  <!-- Menu Mobile (aparece quando clicar no hamburger) -->
+  <!-- Menu Mobile -->
   <div id="mobile-menu" class="hidden md:hidden bg-white w-full py-4 px-4 shadow-lg">
     <a href="#quem-somos" class="block py-2 text-gray-700 hover:text-yellow-600">Quem Somos</a>
-    <a href="#empreendimentos" class="block py-2 text-gray-700 hover:text-yellow-600">Empreendimentos</a>
-    <a href="#entregues" class="block py-2 text-gray-700 hover:text-yellow-600">Entregues</a>
+
+    <!-- Dropdown Mobile -->
+    <div class="relative">
+      <button id="mobile-submenu-button" class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-yellow-600">
+        Empreendimentos <i class="fas fa-chevron-down text-xs"></i>
+      </button>
+      <div id="mobile-submenu" class="hidden pl-4">
+        <a href="#empreendimentos" class="block py-2 text-gray-700 hover:text-yellow-600">Lançamentos</a>
+        <a href="/projects/ResidencialAurora.html" class="block py-2 text-gray-700 hover:text-yellow-600">Residencial Aurora</a>
+        <a href="/projects/ResidencialSolNascente.html" class="block py-2 text-gray-700 hover:text-yellow-600">Residencial Sol Nascente</a>
+        <a href="#entregues" class="block py-2 text-gray-700 hover:text-yellow-600">Entregues</a>
+      </div>
+    </div>
     <a href="#contato" class="block py-2 text-gray-700 hover:text-yellow-600">Contato</a>
+    <a href="https://www8.caixa.gov.br/siopiinternet-web/simulaOperacaoInternet.do?method=inicializarCasoUso" target="_blank" class="block py-2 text-gray-700 hover:text-yellow-600">Simulação</a>
   </div>
 </header>
 
-<!-- Faixa de Marcas (tipo estádio de futebol) -->
-<section class="w-full bg-white py-2 overflow-hidden border-t border-b border-gray-100">
-  <div class="flex animate-marquee whitespace-nowrap">
-    <img src="/images/Caixa1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 1" />
-    <img src="/images/Mcmv1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 2" />
-    <img src="/images/Caixa1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 1" />
-    <img src="/images/Mcmv1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 2" />
-    <img src="/images/Caixa1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 1" />
-    <img src="/images/Mcmv1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 2" />
-    <img src="/images/Caixa1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 1" />
-    <img src="/images/Mcmv1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 2" />
-    <!-- Repete para efeito de looping contínuo -->
-    <img src="/images/Caixa1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 1" />
-    <img src="/images/Mcmv1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 2" />
-    <img src="/images/Caixa1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 1" />
-    <img src="/images/Mcmv1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 2" />
-    <img src="/images/Caixa1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 1" />
-    <img src="/images/Mcmv1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 2" />
-    <img src="/images/Caixa1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 1" />
-    <img src="/images/Mcmv1.png" class="h-7 mx-2 grayscale hover:grayscale-4 transition-8" alt="Marca 2" />
-  </div>
-</section>
-
 <!-- Hero -->
 <section class="flex items-center justify-center shadow-md mx-auto" style="background-image: url('/images/Land.webp'); background-size: cover; background-position: center; height: 100vh;">
-  <div class="bg-black bg-opacity-60 text-white p-10 rounded-xl text-center" data-aos="fade-up">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4">Realize o sonho do seu imóvel</h2>
-    <p class="text-lg">Projetos com qualidade, confiança e segurança</p>
-  </div>
 </section>
 
 <!-- Quem Somos -->
@@ -143,28 +144,29 @@
   <!-- Lançamentos -->
 <section id="empreendimentos" class="bg-gray-50 py-20 px-4 md:px-0" data-aos="fade-up">
   <div class="container mx-auto max-w-6xl">
-    <h2 class="text-3xl font-bold mb-12 text-blue-900">Novos empreendimentos</h2>
+    <h2 class="text-3xl font-bold mb-12 text-blue-900">Novos empreendimentos.</h2>
     
-    <div class="swiper-container">
+    <div class="swiper-container">  
       <div class="swiper-wrapper">
+        
         <!-- Empreendimento 1 -->
-        <a href="/projects/RrresidencialAurora.html" class="swiper-slide empreendimento-card bg-white p-6 shadow-xl rounded-2xl border">
+        <a href="/projects/ResidencialAurora.html" class="swiper-slide empreendimento-card bg-white p-6 shadow-xl rounded-2xl border">
           <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full mb-4">LANÇAMENTO</span>
           <img src="/images/Sacada.jpg" alt="Residencial Aurora" class="mb-4 rounded-xl hover:scale-105 transition-transform duration-300">
           <h3 class="text-2xl font-semibold mb-2 text-blue-900">Residencial Aurora</h3>
           <p class="mb-4 text-gray-600">2 a 3 Quartos, 1 vaga de garagem, lazer completo.</p>
           <p class="font-semibold mb-2">Planta 1 Dormitório:</p>
-          <img src="/images/Planta.webp" alt="Planta 1 Dormitório" class="rounded shadow-md mb-4">
+          <img src="/images/PLANTA HUMANIZADA  01.1.png" alt="Planta 1 Dormitório" class="rounded shadow-md mb-4">
         </a>
 
         <!-- Empreendimento 2 -->
-        <a href="/projects/RrresidencialSolNascente.html" class="swiper-slide empreendimento-card bg-white p-6 shadow-xl rounded-2xl border">
+        <a href="/projects/ResidencialSolNascente.html" class="swiper-slide empreendimento-card bg-white p-6 shadow-xl rounded-2xl border">
           <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full mb-4">LANÇAMENTO</span>
           <img src="/images/Sacada.jpg" alt="Residencial Sol Nascente" class="mb-4 rounded-xl hover:scale-105 transition-transform duration-300">
           <h3 class="text-2xl font-semibold mb-2 text-blue-900">Residencial Sol Nascente</h3>
           <p class="mb-4 text-gray-600">1 a 2 Quartos, ótima localização, estrutura moderna.</p>
           <p class="font-semibold mb-2">Planta 2 Dormitórios:</p>
-          <img src="/images/Planta.webp" alt="Planta 2 Dormitórios" class="rounded shadow-md mb-4">
+          <img src="/images/PLANTA HUMANIZADA  02.png" alt="Planta 2 Dormitórios" class="rounded shadow-md mb-4">
         </a>
 
         <!-- Empreendimento 3 (adicione quantos precisar) -->
@@ -174,7 +176,17 @@
           <h3 class="text-2xl font-semibold mb-2 text-blue-900">Residencial Brisa Mar</h3>
           <p class="mb-4 text-gray-600">3 Quartos, 2 vagas, vista para o mar.</p>
           <p class="font-semibold mb-2">Planta 3 Dormitórios:</p>
-          <img src="/images/Planta.webp" alt="Planta 3 Dormitórios" class="rounded shadow-md mb-4">
+          <img src="/images/PLANTA HUMANIZADA  03.png" alt="Planta 3 Dormitórios" class="rounded shadow-md mb-4">
+        </a>
+
+         <!-- Empreendimento 4 (adicione quantos precisar) -->
+         <a href="/projects/ResrrridencialBrisaMar.html" class="swiper-slide empreendimento-card bg-white p-6 shadow-xl rounded-2xl border">
+          <span class="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full mb-4">LANÇAMENTO</span>
+          <img src="/images/Sacada.jpg" alt="Residencial Brisa Mar" class="mb-4 rounded-xl hover:scale-105 transition-transform duration-300">
+          <h3 class="text-2xl font-semibold mb-2 text-blue-900">Residencial Brisa Mar</h3>
+          <p class="mb-4 text-gray-600">2 Quartos, 2 vagas, terraço amplo.</p>
+          <p class="font-semibold mb-2">Planta 2 Dormitórios:</p>
+          <img src="/images/PLANTA HUMANIZADA  04.png" alt="Planta 3 Dormitórios" class="rounded shadow-md mb-4">
         </a>
       </div>
       
@@ -191,7 +203,7 @@
   </div>
 </section>
 
-<!-- Empreendimentos Entregues -->
+<!-- Empreendimentos Entregues 
 <section id="entregues" class="py-20 px-4 md:px-0 bg-gray-50">
   <div class="container mx-auto max-w-6xl">
     <h2 class="text-3xl font-bold mb-10 text-blue-900">Empreendimentos Entregues</h2>
@@ -199,8 +211,8 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         
-      <!-- Empreendimento Entregue 1 -->
-       <!-- Empreendimento 1 -->
+      <!-- Empreendimento Entregue 1 -
+       <!-- Empreendimento 1 --
        <a href="/projects/ResidenciarrrlAurora.html" class="swiper-slide empreendimento-card bg-white p-6 shadow-xl rounded-2xl border">
         <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full mb-4">ENTREGUES</span>
         <img src="/images/Sacada.jpg" alt="Residencial Aurora" class="mb-4 rounded-xl hover:scale-105 transition-transform duration-300">
@@ -208,7 +220,7 @@
         <p class="mb-4 text-gray-600">2 a 3 Quartos, 1 vaga de garagem, lazer completo.</p>
       </a>
         
-      <!-- Empreendimento Entregue 2 -->
+      <!-- Empreendimento Entregue 2 --
       <a href="/projects/ResidencrrrialAurora.html" class="swiper-slide empreendimento-card bg-white p-6 shadow-xl rounded-2xl border">
         <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full mb-4">ENTREGUES</span>
         <img src="/images/Sacada.jpg" alt="Residencial Aurora" class="mb-4 rounded-xl hover:scale-105 transition-transform duration-300">
@@ -221,7 +233,7 @@
       <div class="swiper-button-prev"></div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Contato -->
 <section id="contato" class="bg-blue-900 text-white py-20 px-4 md:px-0">
@@ -233,6 +245,22 @@
         📱 Fale conosco no WhatsApp
       </a>
     </div>
+    
+      <!-- Redes Sociais com animações -->
+      <div class="flex justify-center gap-8 mb-10 text-3xl">
+        <a href="https://wa.me/5511966627334" target="_blank"
+          class="hover:text-green-400 transition transform hover:scale-125 duration-300">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/sua_pagina" target="_blank"
+          class="hover:text-pink-400 transition transform hover:scale-125 duration-300">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/sua_pagina" target="_blank"
+          class="hover:text-blue-400 transition transform hover:scale-125 duration-300">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
 
     <!-- Formulário -->
     <form action="https://formspree.io/f/mwpoeolv" method="POST" id="form-contato" class="bg-white text-gray-900 p-8 rounded-2xl shadow-2xl max-w-xl mx-auto space-y-6" data-aos="">
@@ -264,6 +292,7 @@
 <!-- Rodapé -->
 <footer class="bg-gray-900 text-gray-300 py-6 text-center">
   <p>&copy; 2025 Construtora RXE. Todos os direitos reservados.</p>
+  <p>&copy; Czrtech Desenvolvimentos.</p>
 </footer>
 
 <!-- Scripts -->
