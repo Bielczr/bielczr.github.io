@@ -101,25 +101,34 @@ form.addEventListener('submit', function (e) {
     }
   });
 
-  // Menu Mobile Principal
-  document.getElementById('mobile-menu-button').addEventListener('click', function() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-  });
+ // Menu Mobile Principal
+ document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
 
   // Submenu Mobile
-  document.getElementById('mobile-submenu-button').addEventListener('click', function() {
-    const submenu = document.getElementById('mobile-submenu');
-    const icon = this.querySelector('i');
-    
-    submenu.classList.toggle('hidden');
-    
-    // Alterna o ícone
-    if (submenu.classList.contains('hidden')) {
-      icon.classList.remove('fa-chevron-up');
-      icon.classList.add('fa-chevron-down');
-    } else {
-      icon.classList.remove('fa-chevron-down');
-      icon.classList.add('fa-chevron-up');
-    }
-  });
+  const mobileSubmenuButton = document.getElementById('mobile-submenu-button');
+  if (mobileSubmenuButton) {
+    mobileSubmenuButton.addEventListener('click', function() {
+      const submenu = document.getElementById('mobile-submenu');
+      const icon = this.querySelector('i');
+      
+      submenu.classList.toggle('hidden');
+      
+      // Alterna o ícone
+      if (submenu.classList.contains('hidden')) {
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+      } else {
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+      }
+    });
+  }
+});

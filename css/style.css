@@ -129,7 +129,6 @@ input:focus, textarea:focus {
   animation-play-state: paused;
 }
 
-/* Adicione no seu <style> */
 .swiper-slide {
   display: flex;
   flex-direction: column;
@@ -156,11 +155,45 @@ input:focus, textarea:focus {
   box-shadow: 0 20px 20px -5px rgba(0, 0.1, 0.1, 0.1);
 }
 
-/* Adicione ao seu <style> */
 #mobile-submenu {
   transition: all 0.3s ease;
 }
 
 .group:hover .absolute {
   display: block !important;
+}
+
+.group:hover .absolute::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Melhorias no dropdown */
+#mobile-submenu {
+  transition: all 0.3s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+
+#mobile-submenu:not(.hidden) {
+  max-height: 500px;
+}
+
+/* Melhor contraste para acessibilidade */
+.text-yellow-600 {
+  color: #d97706;
+}
+.hover\:text-yellow-600:hover {
+  color: #b45309;
 }

@@ -115,11 +115,11 @@
 </head>
 <body class="bg-white text-gray-800 scroll-smooth">
 
+ 
   <!-- HEADER -->
-  <header class="bg-white border-b border-gray-200 py-4 shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 max-w-6xl flex items-center justify-between">
-
-    <!-- Logo como imagem (substitua o caminho e o alt) -->
+<header class="bg-white border-b border-gray-200 py-4 shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-4 max-w-6xl flex items-center justify-between">
+    <!-- Logo -->
     <a href="/index.html" class="hover:opacity-90 transition-opacity duration-200">
       <img 
         src="/images/logoAzulTransparente (1).png" 
@@ -127,21 +127,62 @@
         class="h-16 md:h-18 w-auto"
       >
     </a>
-        <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-blue-900">
-            <a href="#" class="hover:text-blue-700 transition-colors duration-200">Residencial Aurora </a>
-          </h1>
 
-      <nav class="space-x-4 text-gray-700 font-medium">
-        <a href="/index.html" class="hover:text-yellow-500">Home</a>
-        <a href="#sobre" class="hover:text-yellow-500">Sobre</a>
-        <a href="#diferenciais" class="hover:text-yellow-500">Diferenciais</a>
-        <a href="#plantas" class="hover:text-yellow-500">Plantas</a>
-        <a href="#contato" class="hover:text-yellow-500">Contato</a>
-        <a href="#galeria" class="hover:text-yellow-500">Galeria</a>
-        <a href="https://www8.caixa.gov.br/siopiinternet-web/simulaOperacaoInternet.do?method=inicializarCasoUso" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Simulação</a>
-      </nav>
+    <!-- Título do empreendimento (visível apenas em mobile) -->
+    <h1 class="md:hidden text-xl font-bold tracking-tight text-blue-900">
+      <a href="#" class="hover:text-blue-700 transition-colors duration-200">Residencial Aurora</a>
+    </h1>
+    
+    <!-- Botão Mobile -->
+    <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+    
+    
+    <!-- Menu Desktop -->
+    <nav id="desktop-menu" class="hidden md:flex space-x-6 text-sm md:text-base font-medium">
+      <a href="/index.html" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Home</a>
+      <!-- Dropdown Empreendimentos -->
+      <div class="relative group">
+        <button class="flex items-center text-gray-700 hover:text-yellow-600 transition-colors duration-200">
+          Empreendimentos <i class="fas fa-chevron-down ml-1 text-xs"></i>
+        </button>
+        <div class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 py-2 w-48 z-50">
+          <a href="/projects/ResidencialAurora.html" class="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">Residencial Aurora</a>
+          <a href="/projects/ResidencialSolNascente.html" class="block px-4 py-2 text-gray-700 hover:bg-yellow-50 hover:text-yellow-600">Residencial Sol Nascente</a>
+        </div>
+      </div> 
+      <a href="#sobre" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Sobre</a>
+      <a href="#diferenciais" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Diferenciais</a>
+      <a href="#plantas" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Plantas</a>
+      <a href="#galeria" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Galeria</a>
+      <a href="#contato" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Contato</a>
+      <a href="https://www8.caixa.gov.br/siopiinternet-web/simulaOperacaoInternet.do?method=inicializarCasoUso" target="_blank" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200">Simulação</a>
+    </nav>
+  </div>
+  
+  <!-- Menu Mobile -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white w-full py-4 px-4 shadow-lg">
+    <a href="/index.html" class="block py-2 text-gray-700 hover:text-yellow-600">Home</a>
+
+    <!-- Dropdown Mobile -->
+  <div class="relative">
+    <button id="mobile-submenu-button" class="w-full flex justify-between items-center py-2 text-gray-700 hover:text-yellow-600">
+      Empreendimentos <i class="fas fa-chevron-down text-xs"></i>
+    </button>
+    <div id="mobile-submenu" class="hidden pl-4">
+      <a href="/projects/ResidencialAurora.html" class="block py-2 text-gray-700 hover:text-yellow-600">Residencial Aurora</a>
+      <a href="/projects/ResidencialSolNascente.html" class="block py-2 text-gray-700 hover:text-yellow-600">Residencial Sol Nascente</a>
     </div>
-  </header>
+  </div>
+    <a href="#sobre" class="block py-2 text-gray-700 hover:text-yellow-600">Sobre</a>
+    <a href="#diferenciais" class="block py-2 text-gray-700 hover:text-yellow-600">Diferenciais</a>
+    <a href="#plantas" class="block py-2 text-gray-700 hover:text-yellow-600">Plantas</a>
+    <a href="#galeria" class="block py-2 text-gray-700 hover:text-yellow-600">Galeria</a>
+    <a href="#contato" class="block py-2 text-gray-700 hover:text-yellow-600">Contato</a>
+    <a href="https://www8.caixa.gov.br/siopiinternet-web/simulaOperacaoInternet.do?method=inicializarCasoUso" target="_blank" class="block py-2 text-gray-700 hover:text-yellow-600">Simulação</a>
+  </div>
+</header>
 
   <!-- Hero -->
 <section class="flex items-center justify-center shadow-md mx-auto" style="background-image: url('/images/Land.webp'); background-size: cover; background-position: center; height: 100vh;">
@@ -212,10 +253,10 @@
   <!-- PLANTAS -->
   <section id="plantas" class="py-20 bg-red-50">
     <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-4xl font-bold text-blue-900 mb-8">Conheça a Planta</h3>
+      <h3 class="text-4xl font-bold text-blue-900 mb-8">Conheça as Plantas</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
         <div>
-          <img src="/images/PLANTA HUMANIZADA  01.png" alt="Planta 27m² - Studio" class="w-full h-auto rounded-xl shadow-md planta-img" onclick="openPlantasLightbox(0)">
+          <img src="/images/PLANTA HUMANIZADA  01.1.png" alt="Planta 27m² - Studio" class="w-full h-auto rounded-xl shadow-md planta-img" onclick="openPlantasLightbox(0)">
           <p class="mt-2 font-semibold text-gray-700">27m² - Studio</p>
         </div>
         <div>
@@ -318,13 +359,92 @@
     </form>
   </div>
 </section>
+<!-- FOOTER PROFISSIONAL -->
+<footer class="bg-gray-900 text-gray-300 pt-12 pb-6">
+  <div class="container mx-auto px-4 max-w-6xl">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      
+      <!-- Coluna 1: Logo e sobre -->
+      <div class="space-y-4">
+        <img src="/images/logoAzulTransparente (1).png" alt="Construtora RXE" class="h-12 w-auto">
+        <p class="text-gray-400">Construindo sonhos e transformando vidas através de empreendimentos de qualidade.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+            <i class="fab fa-facebook-f text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+            <i class="fab fa-instagram text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+            <i class="fab fa-linkedin-in text-lg"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Coluna 2: Links rápidos -->
+      <div class="space-y-4">
+        <h3 class="text-white font-semibold text-lg mb-4">Links Rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="/index.html" class="hover:text-yellow-500 transition-colors">Home</a></li>
+          <li><a href="#quem-somos" class="hover:text-yellow-500 transition-colors">Quem Somos</a></li>
+          <li><a href="#empreendimentos" class="hover:text-yellow-500 transition-colors">Empreendimentos</a></li>
+          <li><a href="#entregues" class="hover:text-yellow-500 transition-colors">Obras Entregues</a></li>
+          <li><a href="#contato" class="hover:text-yellow-500 transition-colors">Contato</a></li>
+        </ul>
+      </div>
+      
+      <!-- Coluna 3: Contatos -->
+      <div class="space-y-4">
+        <h3 class="text-white font-semibold text-lg mb-4">Contato</h3>
+        <div class="space-y-3">
+          <div class="flex items-start space-x-3">
+            <i class="fas fa-map-marker-alt mt-1 text-yellow-500"></i>
+            <span>Av. Exemplo, 1234 - São Paulo/SP</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-phone-alt text-yellow-500"></i>
+            <span>(11) 9999-9999</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-envelope text-yellow-500"></i>
+            <span>contato@construtorarxe.com.br</span>
+          </div>
+          <div class="flex items-center space-x-3">
+            <i class="fas fa-clock text-yellow-500"></i>
+            <span>Seg-Sex: 9h às 18h</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coluna 4: Newsletter -->
+      <div class="space-y-4">
+        <h3 class="text-white font-semibold text-lg mb-4">Newsletter</h3>
+        <p class="text-gray-400">Cadastre-se para receber novidades e lançamentos.</p>
+        <form class="space-y-3">
+          <input type="email" placeholder="Seu e-mail" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+          <button type="submit" class="bg-yellow-600 hover:bg-yellow-700 text-white font-medium py-2 px-6 rounded-lg transition-colors w-full">Assinar</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Divisor -->
+    <div class="border-t border-gray-800 my-6"></div>
+    
+    <!-- Rodapé inferior -->
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        © 2025 Construtora RXE. Todos os direitos reservados.
+      </div>
+      <div class="flex space-x-6">
+        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors text-sm">Política de Privacidade</a>
+        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors text-sm">Termos de Uso</a>
+        <span class="text-gray-400 text-sm">CNPJ: 00.000.000/0001-00</span>
+      </div>
+    </div>
+  </div>
+</footer>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-100 py-6 text-center text-gray-600 text-sm">
-    © 2025 CZR - Todos os direitos reservados.
-  </footer>
-
-  <script src="/js/script.js"></script>
+<script src="/js/script.js"></script>
 
   <!-- Inclua no final do body -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -479,11 +599,50 @@
       }
     }
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Menu Mobile Principal
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Submenu Mobile
+    const mobileSubmenuButton = document.getElementById('mobile-submenu-button');
+    if (mobileSubmenuButton) {
+      mobileSubmenuButton.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const submenu = document.getElementById('mobile-submenu');
+        const icon = this.querySelector('i');
+        
+        submenu.classList.toggle('hidden');
+        
+        if (submenu.classList.contains('hidden')) {
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        } else {
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-up');
+        }
+      });
+    }
+
+    // Fechar menu ao clicar em links
+    const mobileLinks = document.querySelectorAll('#mobile-menu a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  });
   
   // Configurar swipe para ambas as lightboxes
   setupSwipe(document.getElementById('lightbox-galeria-img'), changeGaleriaImage);
   setupSwipe(document.getElementById('lightbox-plantas-img'), changePlantasImage);
 </script>
-
 </body>
 </html>
